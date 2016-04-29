@@ -1,16 +1,16 @@
 {
-  "name": "markdown-image-helper",
+  "name": "asciidoc-image-helper",
   "main": "./lib/main",
-  "version": "1.0.4",
-  "description": "When paste image to markdown ,this will make a directory name \"assets\" and will paste the image as a png file in this image ,then will insert a relative image url",
+  "version": "0.0.0",
+  "description": "When pasting an image into an asciidoc document, this will make a directory named \"images\" and then will save the image as a png file in this location, then it will insert a relative image url in an asciidoc image reference at the current cursor position.",
   "keywords": [
-    "markdown",
+    "asciidoc",
     "image",
     "clipboard",
     "paste",
     "copy"
   ],
-  "repository": "https://github.com/bigyuki/markdown-image-helper",
+  "repository": "https://github.com/bwklein/asciidoc-image-helper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

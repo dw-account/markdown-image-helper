@@ -1,7 +1,7 @@
 
 {CompositeDisposable,File,Directory} = require 'atom'
 
-module.exports = MarkdownImgHelper =
+module.exports = AsciidocImgHelper =
 
 	activate: (state) ->
 		atom.commands.onWillDispatch (e)  =>
@@ -11,7 +11,7 @@ module.exports = MarkdownImgHelper =
 				return unless editor
 				grammar = editor.getGrammar()
 				return unless grammar
-				return unless grammar.scopeName is 'source.gfm'
+				return unless grammar.scopeName is 'source.asciidoc'
 
 
 				clipboard = require 'clipboard'
@@ -24,7 +24,7 @@ module.exports = MarkdownImgHelper =
 				imgbuffer = img.toPng()
 
 				thefile = new File(editor.getPath())
-				assetsDirPath = thefile.getParent().getPath()+"/assets"
+				assetsDirPath = thefile.getParent().getPath()+"/images"
 
 
 				crypto = require "crypto"
@@ -38,7 +38,7 @@ module.exports = MarkdownImgHelper =
 						# ascClip = "assets/#{filename}"
 						# clipboard.writeText(ascClip)
 
-						@insertUrl "assets/#{filename}",editor
+						@insertUrl "image::images/#{filename}[]",editor
 
 				return false
 

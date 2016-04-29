@@ -1,19 +1,10 @@
-# Markdown Image Helper
+# AsciiDoc Image Helper
 
-An Atom plugin for Markdown grammar. Create image file relative to the markdown file and insert a relative url to that file.
+An Atom plugin for AsciiDoc grammar. Create image file relative to the asciidoc file and insert a relative url to that file.
 
-Inspired by [markdown-assistant](https://github.com/knightli/markdown-assistant)，instead upload the image, i think just copy to the relative path is better.
+Conversion of [markdown-image-helper](https://github.com/bigyuki/markdown-image-helper)，instead uploading the image, copying to the filesystem into a relative path is better.
 
 ## Usage
 1. Take a screenshot or copy any image to the clipboard.
-2. Paste it into Atom markdown editor
-3. See that an directory name "assets" was create, and the directory has a png file, and a url was inserted.
-
-## Example
-* Before
-
-    ![before](https://github.com/bigyuki/markdown-image-helper/raw/master/assets/README-31bb2.png)
-
-* After
-
-    ![after](https://github.com/bigyuki/markdown-image-helper/raw/master/assets/README-d1eba.png)
+2. Paste it into Atom AsciiDoc editor.
+3. See that an directory name "images" was created, the directory has a png file, and a url was inserted.
