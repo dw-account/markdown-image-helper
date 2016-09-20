@@ -11,7 +11,7 @@ module.exports = MarkdownImgHelper =
 				return unless editor
 				grammar = editor.getGrammar()
 				return unless grammar
-				return unless grammar.scopeName is 'source.gfm'
+				return unless grammar.scopeName in ['source.gfm', 'text.md']
 
 
 				clipboard = require 'clipboard'
