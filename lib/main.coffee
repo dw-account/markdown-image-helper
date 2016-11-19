@@ -61,8 +61,10 @@ module.exports = MarkdownImgHelper =
 			callback()
 
 	insertUrl: (url,editor) ->
-		editor.insertText(url)
-
+		editor.insertText('![')
+		pos = editor.getCursorBufferPosition()
+		editor.insertText('](' + url + ')')
+		editor.setCursorBufferPosition(pos)
 
 	deactivate: ->
 
