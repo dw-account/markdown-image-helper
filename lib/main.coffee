@@ -61,7 +61,7 @@ module.exports = MarkdownImgHelper =
 			callback()
 
 	insertUrl: (url,editor) ->
-		editor.insertText(url)
+		editor.insertText('![](' + url + ')')
 
 
 	deactivate: ->
