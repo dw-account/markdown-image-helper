@@ -61,9 +61,8 @@ module.exports = MarkdownImgHelper =
 			callback()
 
 	insertUrl: (url,editor) ->
-		editor.insertText(url)
-
-
+		editor.insertText('![' + url + '](' + url + ')')
+		## 这样可以一键复制 不用再 写 img 标签啦
 	deactivate: ->
 
 
